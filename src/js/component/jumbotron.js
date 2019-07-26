@@ -1,4 +1,5 @@
 import React from "react";
+import { Card } from "./card.js";
 export const Jumbotron = () => {
 	return (
 		<div className="container">
@@ -14,6 +15,7 @@ export const Jumbotron = () => {
 					className="btn btn-primary btn-lg">
 					Concept
 				</a>
+				<Card />
 			</header>
 		</div>
 	);
