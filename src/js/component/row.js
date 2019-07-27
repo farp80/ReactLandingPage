@@ -1,6 +1,7 @@
 import React from "react";
+import PropType from "prop-types";
 
-export const Row = () => {
+export const Row = props => {
 	return (
 		<div className="col-lg-3 col-md-6 mb-4">
 			<div className="card h-100">
@@ -10,18 +11,22 @@ export const Row = () => {
 					alt=""
 				/>
 				<div className="card-body">
-					<h4 className="card-title">Card title</h4>
-					<p className="card-text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit. Sapiente esse necessitatibus neque.
-					</p>
+					<h4 className="card-title">{props.cardName}</h4>
+					<p className="card-text">{props.cardText}</p>
 				</div>
 				<div className="card-footer">
-					<a href="#" className="btn btn-primary">
-						Find Out More!
+					<a href={props.buttonRef} className="btn btn-primary">
+						{props.buttonName}
 					</a>
 				</div>
 			</div>
 		</div>
 	);
+};
+
+Row.propTypes = {
+	buttonName: PropType.string,
+	buttonRef: PropType.string,
+	cardText: PropType.string,
+	cardName: PropType.string
 };

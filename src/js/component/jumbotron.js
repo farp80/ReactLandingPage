@@ -15,8 +15,8 @@ export const Jumbotron = () => {
 					className="btn btn-primary btn-lg">
 					Concept
 				</a>
-				<Card />
 			</header>
+			<Card />
 		</div>
 	);
 };
